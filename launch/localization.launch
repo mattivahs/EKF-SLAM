@@ -1,0 +1,7 @@
+<launch>
+    <!-- launch apriltag_detection_node -->
+    <remap from="/odometry_data" to="arduino_node/odometry"/>
+    <remap from="/pitch_angle" to="arduino_node/pitch_angle"/>
+    <!-- <node pkg="localization" type="EKF_SLAM_Node.py" name="EKF_SLAM_Node" output="screen"/>-->
+    <node pkg="localization" type="EKFSLAM_orientation_Node.py" name="EKF_SLAM_Node" output="screen"/>
+</launch>
